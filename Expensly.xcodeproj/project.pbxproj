@@ -69,7 +69,7 @@
 		9D34BEF7D1C026C8D40B9475 /* ExpenseStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseStoreTests.swift; sourceTree = "<group>"; };
 		9FA8D1379232497F20ACB73E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		A239D07EAAA93543EBB5559A /* PeriodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodBar.swift; sourceTree = "<group>"; };
-		A99B5B00F6EBBD8411CE660B /* Expensly.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Expensly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99B5B00F6EBBD8411CE660B /* Expensly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expensly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6F4F1CB98D19E0E36A5E47 /* ImportExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportTests.swift; sourceTree = "<group>"; };
 		BD627DC037B8FC3BFB6EEB47 /* ExpenslyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenslyApp.swift; sourceTree = "<group>"; };
 		C1C312B60043B43DB4398EDF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -246,7 +246,6 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					6323FCB3E7B9B47881EB8F73 = {
-						DevelopmentTeam = 9932454228;
 						ProvisioningStyle = Automatic;
 					};
 					962ADC2D4555E7C80CDBF323 = {
@@ -368,13 +367,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y2NF3B2C3V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Expensly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.ios.Expenses;
+				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.apps.Expenses;
 				PRODUCT_NAME = Expensly;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,13 +552,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y2NF3B2C3V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Expensly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.ios.Expenses;
+				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.apps.Expenses;
 				PRODUCT_NAME = Expensly;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
