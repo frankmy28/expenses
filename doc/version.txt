@@ -4,6 +4,15 @@ Expensly - Release Notes
 (C) 2018 Frank Mathy
 http://expenslyapp.wordpress.com
 
+Version 2.0 - not yet released
+------------------------------
+- Rewritten in SwiftUI for current iOS versions; existing data is kept
+- Exchange rates work again (the rate service changed its format)
+- Locations come from Apple Maps instead of Foursquare
+- Pie chart in the category report
+- Opening an expense no longer replaces its saved exchange rate
+- Budgets that are still used by expenses can no longer be deleted
+
 Version 1.2 - September 22, 2018
 --------------------------
 - Fixed bug: Application crashes when using FX rates #100

@@ -1,9 +1,32 @@
-# Expenses - iOS Expense Management App
-The Expenses App is an iOS App Developed in Swift for managing your daily expenses. I've tried many of the apps available on the AppStore, but they fail by having complex user interfaces, non-intuitive / non-iOS-standard controls, missing multi user support and more.
-This app is currently in development and objectives in its implementation have been:
-- Simplistic user interface using standard iOS List View controls etc.
-- Cloud support for sharing accounts with other users (implemented using Apple's CloudKit)
-- Live updates for new expenses
-- Simple reporting controls
-- Export / import funcationality
-The application is only intended for tracking your daily expenses (cash money), it's not ment to be a financial software to track your bank accounts etc..
+# Expensly - iOS Expense Tracking App
+
+Expensly is an iOS app for tracking your daily cash expenses. It is meant for the money you spend in
+shops, cafés and on the go, not as financial software for your bank accounts.
+
+Goals:
+- Simple user interface built from standard iOS controls
+- Quick entry of an expense, including foreign currencies with automatic conversion
+- Simple reports per week, month or year and per category
+- Export and import as a tab-separated text file
+
+Data is stored on the device with Core Data.
+
+## Building
+
+The app is written in SwiftUI (Swift 6, iOS 17 or later). The Xcode project is generated from
+`project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen). The generated
+`Expensly.xcodeproj` is checked in, so you only need XcodeGen when you change `project.yml`:
+
+```sh
+xcodegen generate
+open Expensly.xcodeproj
+```
+
+Run the unit tests:
+
+```sh
+xcodebuild test -project Expensly.xcodeproj -scheme Expensly \
+  -destination 'platform=iOS Simulator,name=iPhone 17'
+```
+
+Release notes are in `doc/version.txt`.
