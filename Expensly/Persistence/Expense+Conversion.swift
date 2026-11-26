@@ -26,7 +26,7 @@ extension Expense {
 }
 
 /// A place assigned to an expense.
-struct Venue: Hashable, Identifiable, Sendable {
+struct Venue: Hashable, Identifiable, Codable, Sendable {
     var id: String
     var name: String
     var latitude: Double

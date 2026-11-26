@@ -8,8 +8,11 @@ Goals:
 - Quick entry of an expense, including foreign currencies with automatic conversion
 - Simple reports per week, month or year and per category
 - Export and import as a tab-separated text file
+- Sharing budgets with family members through a shared iCloud Drive folder
 
-Data is stored on the device with Core Data.
+Data is stored on the device with Core Data. Sharing works without CloudKit: each device writes
+its own sync file into a folder everyone can access (for example an iCloud Drive folder shared in
+the Files app) and merges the others' files.
 
 ## Building
 

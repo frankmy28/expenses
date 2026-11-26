@@ -71,6 +71,66 @@
         }
       }
     },
+    "%lld files are still downloading from iCloud. Sync again in a moment.": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld file is still downloading from iCloud. Sync again in a moment."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld files are still downloading from iCloud. Sync again in a moment."
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Datei wird noch aus iCloud geladen. Gleich noch einmal synchronisieren."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Dateien werden noch aus iCloud geladen. Gleich noch einmal synchronisieren."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld"
+          }
+        }
+      }
+    },
+    "%lld received, %lld deleted · %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld empfangen, %lld gelöscht · %@"
+          }
+        }
+      }
+    },
     "Add": {
       "localizations": {
         "de": {
@@ -187,6 +247,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kategorien"
+          }
+        }
+      }
+    },
+    "Choose Another Folder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anderen Ordner wählen"
+          }
+        }
+      }
+    },
+    "Choose Shared Folder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geteilten Ordner wählen"
           }
         }
       }
@@ -471,6 +551,16 @@
         }
       }
     },
+    "Expensly has no access to the folder %@. Choose it again.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expensly hat keinen Zugriff auf den Ordner %@. Bitte erneut wählen."
+          }
+        }
+      }
+    },
     "Export": {
       "localizations": {
         "de": {
@@ -587,6 +677,16 @@
         }
       }
     },
+    "Last sync %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt synchronisiert %@"
+          }
+        }
+      }
+    },
     "Loading exchange rate…": {
       "localizations": {
         "de": {
@@ -657,12 +757,42 @@
         }
       }
     },
+    "No files from others yet.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Dateien von anderen."
+          }
+        }
+      }
+    },
+    "None": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keiner"
+          }
+        }
+      }
+    },
     "OK": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "OK"
+          }
+        }
+      }
+    },
+    "Only expenses in shared budgets are sent to and received from the others. New budgets are shared while all budgets are selected.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur Ausgaben in geteilten Budgets werden an die anderen gesendet und von ihnen empfangen. Neue Budgets werden geteilt, solange alle Budgets ausgewählt sind."
           }
         }
       }
@@ -757,12 +887,92 @@
         }
       }
     },
+    "Share a folder in iCloud Drive with your family in the Files app, then choose that folder here on each iPhone. Expensly syncs when it opens and when you tap Sync Now. Budgets are matched by name.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teile einen Ordner in iCloud Drive über die Dateien-App mit deiner Familie und wähle diesen Ordner hier auf jedem iPhone. Expensly synchronisiert beim Öffnen und bei „Jetzt synchronisieren“. Budgets werden über ihren Namen zugeordnet."
+          }
+        }
+      }
+    },
     "Share the expenses of the shown period as a tab-separated text file.": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Teile die Ausgaben des angezeigten Zeitraums als Textdatei (Tab-getrennt)."
+          }
+        }
+      }
+    },
+    "Shared budgets": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geteilte Budgets"
+          }
+        }
+      }
+    },
+    "Shared folder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geteilter Ordner"
+          }
+        }
+      }
+    },
+    "Shared with %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geteilt mit %@"
+          }
+        }
+      }
+    },
+    "Sharing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen"
+          }
+        }
+      }
+    },
+    "Stop Sharing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen beenden"
+          }
+        }
+      }
+    },
+    "Stop sharing?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen beenden?"
+          }
+        }
+      }
+    },
+    "Sync Now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt synchronisieren"
           }
         }
       }
@@ -817,12 +1027,32 @@
         }
       }
     },
+    "This cannot be undone. Expenses in shared budgets are also deleted for the others at the next sync.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies kann nicht rückgängig gemacht werden. Ausgaben in geteilten Budgets werden bei der nächsten Synchronisierung auch bei den anderen gelöscht."
+          }
+        }
+      }
+    },
     "Total": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Summe"
+          }
+        }
+      }
+    },
+    "Unnamed device": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbenanntes Gerät"
           }
         }
       }
@@ -863,6 +1093,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ihre Ausgaben konnten nicht geöffnet werden"
+          }
+        }
+      }
+    },
+    "Your expenses stay on this iPhone. Your file in the shared folder is no longer updated.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Ausgaben bleiben auf diesem iPhone. Deine Datei im geteilten Ordner wird nicht mehr aktualisiert."
+          }
+        }
+      }
+    },
+    "Your name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein Name"
           }
         }
       }

@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 
 struct InfoView: View {
     @Environment(ExpenseStore.self) private var store
+    @Environment(SyncService.self) private var sync
     @State private var isImporting = false
     @State private var isConfirmingDelete = false
     @State private var message: (title: String, text: String)?
@@ -27,6 +28,8 @@ struct InfoView: View {
                     }
                     LabeledContent("Currency", value: "\(store.appCurrency) – \(Currencies.name(for: store.appCurrency))")
                 }
+
+                SharingSection()
 
                 Section("Data") {
                     Button("Import Expenses", systemImage: "square.and.arrow.down") {
@@ -64,7 +67,11 @@ struct InfoView: View {
                                 titleVisibility: .visible) {
                 Button("Delete All Expenses", role: .destructive) { store.deleteAllExpenses() }
             } message: {
-                Text("This cannot be undone.")
+                if sync.isConfigured {
+                    Text("This cannot be undone. Expenses in shared budgets are also deleted for the others at the next sync.")
+                } else {
+                    Text("This cannot be undone.")
+                }
             }
             .alert(message?.title ?? "", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {
                 Button("OK") {}

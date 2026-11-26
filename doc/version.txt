@@ -7,6 +7,7 @@ http://expenslyapp.wordpress.com
 Version 2.0 - not yet released
 ------------------------------
 - Rewritten in SwiftUI for current iOS versions; existing data is kept
+- Share budgets with your family through a shared iCloud Drive folder
 - Exchange rates work again (the rate service changed its format)
 - Locations come from Apple Maps instead of Foursquare
 - Pie chart in the category report

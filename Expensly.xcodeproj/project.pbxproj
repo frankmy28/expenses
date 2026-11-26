@@ -10,6 +10,7 @@
 		00FAA4B2FFD9915A9982B012 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8A4FB4212851F34701F9EF /* ExpenseDetailView.swift */; };
 		0108DBD73F3B07BE3064798C /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4224DCC9F84383C6B466B5 /* LocationPickerView.swift */; };
 		01950C2602B02FB1EE8E7DB3 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18F050323D93E25945440F /* Tips.swift */; };
+		1414868C8AF0440EF6D3CA8F /* SyncFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56286946AC88CE1E624F7F6 /* SyncFolder.swift */; };
 		170447D7E5E51A2A6FBF4584 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EBEDC42A684903135C08753C /* Localizable.xcstrings */; };
 		196A87E3D1B0F730DB1C4E9E /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA0B70FA539D20D97FC41A /* TestSupport.swift */; };
 		1A4C59B5ECC83B139F5D9BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9ABABFF1ECE33DD26B3C4D5 /* Assets.xcassets */; };
@@ -28,13 +29,18 @@
 		6B46797CF93932D5DFBA09B1 /* ExpenslyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DC037B8FC3BFB6EEB47 /* ExpenslyApp.swift */; };
 		705AC3278316CC5BC82069AA /* ExchangeRateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE866FEF34F81633FFBE73D /* ExchangeRateServiceTests.swift */; };
 		72D977AF99C17046B3C8A913 /* ExpensePeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A10DEE5DCDBBF9F770CA199 /* ExpensePeriodTests.swift */; };
+		75D65CC58979F5ED0E11C384 /* SyncSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A26CA13218E13F3F74A386 /* SyncSnapshot.swift */; };
 		7A8E8D9065EEFD765A398D41 /* ExpenseGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3C3AAEE18ABF19C5DB1C0 /* ExpenseGrouping.swift */; };
 		8B90F035844250571F2A47B7 /* Expense+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B13F48C5A2CFFF0DB731D2 /* Expense+Conversion.swift */; };
 		92CF9944C4370786BE1F0264 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49188E4EAF7011A406FCFBF /* InfoView.swift */; };
 		94CBDBC0DEA298CFCE3515BA /* PickerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E88230D47F9DFED905851 /* PickerViews.swift */; };
+		9FFE7DEC80ECDF3CCD5FBCB3 /* SyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366112FBB03EEE10370E0132 /* SyncTests.swift */; };
 		A5DF073059759BA6A1E8C0FC /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445CD2E0E2AE4DF609C9BD54 /* ExchangeRateService.swift */; };
 		ACAF34A0DE4C6CEDFC938846 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC90898E56F2D2937FA0A81 /* MigrationTests.swift */; };
+		AD475467519AE54EEE1A666E /* SharingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899AFCC723D9908949C16AC0 /* SharingViews.swift */; };
 		B1AF7D3B2A37FC04BC8906C7 /* ImportExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F4F1CB98D19E0E36A5E47 /* ImportExportTests.swift */; };
+		C530D49B9A75677FAE068112 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89C959D13ED57713AE6FE2 /* SyncService.swift */; };
+		E60E74973B6B28992DDB3F50 /* ExpenseStore+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F949211DFF32C4E465A866 /* ExpenseStore+Sync.swift */; };
 		FF9295F00D69D31AE6DF2DE4 /* ExpensePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461358A4358CB5BE3D7B37F2 /* ExpensePeriod.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +56,9 @@
 
 /* Begin PBXFileReference section */
 		0113B0365C83C1831A18F27A /* Expenses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expenses.xcdatamodel; sourceTree = "<group>"; };
+		272B789DA687A857870275BC /* Expenses 1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Expenses 1.2.xcdatamodel"; sourceTree = "<group>"; };
 		2BC90898E56F2D2937FA0A81 /* MigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTests.swift; sourceTree = "<group>"; };
+		366112FBB03EEE10370E0132 /* SyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTests.swift; sourceTree = "<group>"; };
 		3BE866FEF34F81633FFBE73D /* ExchangeRateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateServiceTests.swift; sourceTree = "<group>"; };
 		3D9B00EF821221BC42F94287 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		42604BCB98335B9E957189E5 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -66,21 +74,26 @@
 		6E9BB83C2427AFD2FD09FE95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72BA0B70FA539D20D97FC41A /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
 		7A10DEE5DCDBBF9F770CA199 /* ExpensePeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePeriodTests.swift; sourceTree = "<group>"; };
+		899AFCC723D9908949C16AC0 /* SharingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingViews.swift; sourceTree = "<group>"; };
 		9D34BEF7D1C026C8D40B9475 /* ExpenseStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseStoreTests.swift; sourceTree = "<group>"; };
 		9FA8D1379232497F20ACB73E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		A239D07EAAA93543EBB5559A /* PeriodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodBar.swift; sourceTree = "<group>"; };
-		A99B5B00F6EBBD8411CE660B /* Expensly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expensly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99B5B00F6EBBD8411CE660B /* Expensly.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Expensly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56286946AC88CE1E624F7F6 /* SyncFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncFolder.swift; sourceTree = "<group>"; };
 		BB6F4F1CB98D19E0E36A5E47 /* ImportExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportTests.swift; sourceTree = "<group>"; };
 		BD627DC037B8FC3BFB6EEB47 /* ExpenslyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenslyApp.swift; sourceTree = "<group>"; };
+		BD89C959D13ED57713AE6FE2 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		C1C312B60043B43DB4398EDF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC61A54CA6AC64F1CF84DA3C /* ExpenslyTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ExpenslyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9EE8F8A471401122BAE8D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = en; path = en.lproj/DefaultValues.plist; sourceTree = "<group>"; };
 		D0B13F48C5A2CFFF0DB731D2 /* Expense+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+Conversion.swift"; sourceTree = "<group>"; };
+		D2A26CA13218E13F3F74A386 /* SyncSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSnapshot.swift; sourceTree = "<group>"; };
 		D49188E4EAF7011A406FCFBF /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		D9ABABFF1ECE33DD26B3C4D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCFFBBE829BFFB1630B8FA08 /* ExpenseTextFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTextFormat.swift; sourceTree = "<group>"; };
 		DFC3C3AAEE18ABF19C5DB1C0 /* ExpenseGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseGrouping.swift; sourceTree = "<group>"; };
 		E87244CDD8D699A712C69540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E8F949211DFF32C4E465A866 /* ExpenseStore+Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseStore+Sync.swift"; sourceTree = "<group>"; };
 		EBEDC42A684903135C08753C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FA6D4B129056135282186DC3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = de; path = de.lproj/DefaultValues.plist; sourceTree = "<group>"; };
 		FADDB2D075893A2AD33D2AA8 /* CategoryReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryReportView.swift; sourceTree = "<group>"; };
@@ -115,7 +128,9 @@
 				DFC3C3AAEE18ABF19C5DB1C0 /* ExpenseGrouping.swift */,
 				461358A4358CB5BE3D7B37F2 /* ExpensePeriod.swift */,
 				5DFF63AB97FDC8B5C58C74F3 /* ExpenseStore.swift */,
+				E8F949211DFF32C4E465A866 /* ExpenseStore+Sync.swift */,
 				DCFFBBE829BFFB1630B8FA08 /* ExpenseTextFormat.swift */,
+				D2A26CA13218E13F3F74A386 /* SyncSnapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 				9D34BEF7D1C026C8D40B9475 /* ExpenseStoreTests.swift */,
 				BB6F4F1CB98D19E0E36A5E47 /* ImportExportTests.swift */,
 				2BC90898E56F2D2937FA0A81 /* MigrationTests.swift */,
+				366112FBB03EEE10370E0132 /* SyncTests.swift */,
 				72BA0B70FA539D20D97FC41A /* TestSupport.swift */,
 			);
 			path = ExpenslyTests;
@@ -156,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				445CD2E0E2AE4DF609C9BD54 /* ExchangeRateService.swift */,
+				B56286946AC88CE1E624F7F6 /* SyncFolder.swift */,
+				BD89C959D13ED57713AE6FE2 /* SyncService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +210,7 @@
 				6C4224DCC9F84383C6B466B5 /* LocationPickerView.swift */,
 				A239D07EAAA93543EBB5559A /* PeriodBar.swift */,
 				476E88230D47F9DFED905851 /* PickerViews.swift */,
+				899AFCC723D9908949C16AC0 /* SharingViews.swift */,
 				4D18F050323D93E25945440F /* Tips.swift */,
 			);
 			path = Views;
@@ -300,6 +319,7 @@
 				39DBA5C7086D0A247B1D2991 /* ExpenseStoreTests.swift in Sources */,
 				B1AF7D3B2A37FC04BC8906C7 /* ImportExportTests.swift in Sources */,
 				ACAF34A0DE4C6CEDFC938846 /* MigrationTests.swift in Sources */,
+				9FFE7DEC80ECDF3CCD5FBCB3 /* SyncTests.swift in Sources */,
 				196A87E3D1B0F730DB1C4E9E /* TestSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +337,7 @@
 				7A8E8D9065EEFD765A398D41 /* ExpenseGrouping.swift in Sources */,
 				462FD7451B8F05B85055F294 /* ExpenseListView.swift in Sources */,
 				FF9295F00D69D31AE6DF2DE4 /* ExpensePeriod.swift in Sources */,
+				E60E74973B6B28992DDB3F50 /* ExpenseStore+Sync.swift in Sources */,
 				6001CEEA894CEB9368599BCE /* ExpenseStore.swift in Sources */,
 				69438B715483A28F8C2B7C09 /* ExpenseTextFormat.swift in Sources */,
 				41BA64CBD697DA24975906CE /* Expenses.xcdatamodeld in Sources */,
@@ -326,6 +347,10 @@
 				4FAAD32BDBCF38A4FF996166 /* PeriodBar.swift in Sources */,
 				36D3658C6FE5718426F59884 /* PersistenceController.swift in Sources */,
 				94CBDBC0DEA298CFCE3515BA /* PickerViews.swift in Sources */,
+				AD475467519AE54EEE1A666E /* SharingViews.swift in Sources */,
+				1414868C8AF0440EF6D3CA8F /* SyncFolder.swift in Sources */,
+				C530D49B9A75677FAE068112 /* SyncService.swift in Sources */,
+				75D65CC58979F5ED0E11C384 /* SyncSnapshot.swift in Sources */,
 				01950C2602B02FB1EE8E7DB3 /* Tips.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +395,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Expensly/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Expensly;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +416,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.ios.ExpenslyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.apps.ExpenslyTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Expensly.app/Expensly";
@@ -472,7 +495,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.ios.ExpenslyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.frankmathy.apps.ExpenslyTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Expensly.app/Expensly";
@@ -556,8 +579,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Expensly/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Expensly;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,9 +627,10 @@
 			isa = XCVersionGroup;
 			children = (
 				4B46CC04827D3C90CDF67317 /* Expenses 1.1.xcdatamodel */,
+				272B789DA687A857870275BC /* Expenses 1.2.xcdatamodel */,
 				0113B0365C83C1831A18F27A /* Expenses.xcdatamodel */,
 			);
-			currentVersion = 4B46CC04827D3C90CDF67317 /* Expenses 1.1.xcdatamodel */;
+			currentVersion = 272B789DA687A857870275BC /* Expenses 1.2.xcdatamodel */;
 			path = Expenses.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

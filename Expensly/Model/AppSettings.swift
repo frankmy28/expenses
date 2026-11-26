@@ -47,6 +47,52 @@ struct AppSettings {
         get { defaults.string(forKey: Key.lastAccount) }
         nonmutating set { defaults.set(newValue, forKey: Key.lastAccount) }
     }
+
+    // MARK: - Sharing through a shared folder
+
+    private enum SyncKey {
+        static let folderBookmark = "SyncFolderBookmark"
+        static let sharedBudgets = "SyncSharedBudgets"
+        static let deviceID = "SyncDeviceID"
+        static let ownerName = "SyncOwnerName"
+        static let lastSync = "SyncLastDate"
+    }
+
+    /// Security-scoped bookmark of the folder chosen for sharing.
+    var syncFolderBookmark: Data? {
+        get { defaults.data(forKey: SyncKey.folderBookmark) }
+        nonmutating set { defaults.set(newValue, forKey: SyncKey.folderBookmark) }
+    }
+
+    /// Budget names that are shared. `nil` means all budgets.
+    var sharedBudgetNames: Set<String>? {
+        get { (defaults.stringArray(forKey: SyncKey.sharedBudgets)).map(Set.init) }
+        nonmutating set { defaults.set(newValue.map { Array($0).sorted() }, forKey: SyncKey.sharedBudgets) }
+    }
+
+    func isShared(budget name: String?) -> Bool {
+        guard let name else { return false }
+        return sharedBudgetNames?.contains(name) ?? true
+    }
+
+    /// Identifies this installation; its sync file is named after it.
+    var syncDeviceID: String {
+        if let id = defaults.string(forKey: SyncKey.deviceID) { return id }
+        let id = UUID().uuidString
+        defaults.set(id, forKey: SyncKey.deviceID)
+        return id
+    }
+
+    /// The name others see for changes from this device.
+    var syncOwnerName: String {
+        get { defaults.string(forKey: SyncKey.ownerName) ?? "" }
+        nonmutating set { defaults.set(newValue, forKey: SyncKey.ownerName) }
+    }
+
+    var lastSyncDate: Date? {
+        get { defaults.object(forKey: SyncKey.lastSync) as? Date }
+        nonmutating set { defaults.set(newValue, forKey: SyncKey.lastSync) }
+    }
 }
 
 enum Currencies {

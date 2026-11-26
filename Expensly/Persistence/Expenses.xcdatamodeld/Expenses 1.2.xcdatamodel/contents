@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="accountName" attributeType="String" syncable="YES"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currencySymbol" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="account" inverseEntity="Expense" syncable="YES"/>
+    </entity>
+    <entity name="DeletedExpense" representedClassName="DeletedExpense" syncable="YES" codeGenerationType="class">
+        <attribute name="deletedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="ExchangeRate" representedClassName="ExchangeRate" syncable="YES" codeGenerationType="class">
+        <attribute name="active" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="baseCcy" attributeType="String" syncable="YES"/>
+        <attribute name="rate" attributeType="Double" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recordDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="termsCcy" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="category" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" defaultValueString="I" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="exchangeRate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="project" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="venueId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="venueLng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="venueName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="expenses" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <entity name="NamedItem" representedClassName="NamedItem" syncable="YES" codeGenerationType="class">
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DeletedExpense" positionX="-306" positionY="-36" width="128" height="59"/>
+        <element name="Account" positionX="-180" positionY="-243" width="128" height="105"/>
+        <element name="ExchangeRate" positionX="-108" positionY="-144" width="128" height="120"/>
+        <element name="Expense" positionX="97" positionY="-243" width="128" height="225"/>
+        <element name="NamedItem" positionX="-308" positionY="-135" width="128" height="75"/>
+    </elements>
+</model>

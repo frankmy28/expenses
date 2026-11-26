@@ -17,7 +17,9 @@ final class ExpenseStore {
     @ObservationIgnored let settings: AppSettings
     @ObservationIgnored let rates: ExchangeRateService
     @ObservationIgnored private let calendar: Calendar
-    @ObservationIgnored private let bundle: Bundle
+    @ObservationIgnored let bundle: Bundle
+    /// The clock for change and deletion times used by sync. Tests replace it.
+    @ObservationIgnored var now: () -> Date = { .now }
 
     private(set) var period: ExpensePeriod
     private(set) var expenses: [Expense] = []
@@ -25,7 +27,7 @@ final class ExpenseStore {
     private(set) var byCategory: [ExpenseGroup<String>] = []
     private(set) var total: Double = 0
     /// Bumped on every change to budgets, categories or projects so pickers refresh.
-    private(set) var listsVersion = 0
+    var listsVersion = 0
     var failure: Failure?
 
     var appCurrency: String { settings.appCurrencyCode }
@@ -149,6 +151,8 @@ final class ExpenseStore {
         target.venueName = draft.venue?.name
         target.venueLat = draft.venue?.latitude ?? 0
         target.venueLng = draft.venue?.longitude ?? 0
+        if target.uuid == nil { target.uuid = UUID() }
+        target.modifiedAt = now()
         guard save(String(localized: "Error saving expense record")) else { return nil }
         settings.lastCategory = draft.category
         settings.lastProject = draft.project
@@ -158,6 +162,7 @@ final class ExpenseStore {
     }
 
     func delete(_ expense: Expense) {
+        recordDeletion(of: expense)
         context.delete(expense)
         save(String(localized: "Error deleting expense record"))
         reload()
@@ -166,6 +171,7 @@ final class ExpenseStore {
     func deleteAllExpenses() {
         do {
             for expense in try context.fetch(Expense.fetchRequest()) {
+                recordDeletion(of: expense)
                 context.delete(expense)
             }
         } catch {
@@ -208,6 +214,8 @@ final class ExpenseStore {
             expense.venueLng = row.venue?.longitude ?? 0
             expense.currency = row.currency
             expense.exchangeRate = row.exchangeRate
+            expense.uuid = UUID()
+            expense.modifiedAt = now()
         }
         do {
             try context.save()
@@ -246,7 +254,17 @@ final class ExpenseStore {
         let name = name.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !name.isEmpty else { return }
         if settings.lastAccount == account.accountName { settings.lastAccount = name }
+        if let oldName = account.accountName, var shared = settings.sharedBudgetNames, shared.contains(oldName) {
+            shared.remove(oldName)
+            shared.insert(name)
+            settings.sharedBudgetNames = shared
+        }
         account.accountName = name
+        // Sync matches budgets by name: mark the expenses as changed so the new name spreads.
+        let changedAt = now()
+        for case let expense as Expense in account.expenses ?? [] {
+            expense.modifiedAt = changedAt
+        }
         save(String(localized: "Error saving budget"))
         listsVersion += 1
         reload()
@@ -267,14 +285,14 @@ final class ExpenseStore {
     }
 
     /// Budgets as stored, without seeding (an import brings its own budgets).
-    private func fetchAccounts() -> [Account] {
+    func fetchAccounts() -> [Account] {
         let request = Account.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "accountName", ascending: true,
                                                     selector: #selector(NSString.localizedStandardCompare(_:)))]
         return (try? context.fetch(request)) ?? []
     }
 
-    private func makeAccount(named name: String) -> Account {
+    func makeAccount(named name: String) -> Account {
         let account = Account(context: context)
         account.accountName = name
         account.currencyCode = appCurrency
@@ -315,7 +333,8 @@ final class ExpenseStore {
         listsVersion += 1
     }
 
-    private func makeItem(_ name: String, in list: NamedItemList) -> NamedItem {
+    @discardableResult
+    func makeItem(_ name: String, in list: NamedItemList) -> NamedItem {
         let item = NamedItem(context: context)
         item.itemName = name
         item.listName = list.rawValue
@@ -325,7 +344,7 @@ final class ExpenseStore {
     // MARK: - Errors
 
     @discardableResult
-    private func save(_ errorTitle: String) -> Bool {
+    func save(_ errorTitle: String) -> Bool {
         guard context.hasChanges else { return true }
         do {
             try context.save()
@@ -337,7 +356,7 @@ final class ExpenseStore {
         }
     }
 
-    private func report(_ title: String, _ error: Error) {
+    func report(_ title: String, _ error: Error) {
         failure = Failure(title: title, message: error.localizedDescription)
     }
 }
